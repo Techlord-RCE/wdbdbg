@@ -15,6 +15,7 @@ setup(
     url='https://bitbucket.org/yformaggio/wdbdbg',
     classifiers=[
         'Development Status :: 4 - Beta',
+        'License :: OSI Approved :: GPL V3',
         'Programming Language :: Python',
         'Intended Audience :: Developers',
         'Environment :: Console',
