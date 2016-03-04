@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # coding: utf-8
 #
-# Copyright (C) 2016 Yannick Formaggio for Istuary Innovation Labs, Inc. 
+# Copyright (C) 2016 Yannick Formaggio for Istuary Innovation Labs, Inc.
 # and/or its affiliates. All rights reserved.
 #
 # This file is part of WdbDBG.
@@ -19,7 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with WdbDBG.  If not, see <http://www.gnu.org/licenses/>.
 
-
+import time
 import threading
 from collections import OrderedDict
 from capstone import *
@@ -262,10 +262,12 @@ class Dbg(object):
         logger.debug("sending ack")
         self.__get_event_data()
 
+        time.sleep(0.05)                    # Fix issue #1: VxWorks 5.x needs some time between requests
         if self.task_id:
             logger.debug("getting registers status")
             self.__get_registers()
 
+        time.sleep(0.05)                    # Fix issue #1: VxWorks 5.x needs some time between requests
         if self.registers:
             logger.debug("dumping memory around pc")
             self.__get_memory_dump()
