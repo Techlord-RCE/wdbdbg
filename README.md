@@ -1,5 +1,5 @@
 # Python WDB RPC monitor for VxWorks 5.x and 6.x
-Author: Yannick Formaggio
+Author: Yannick Formaggio for [Istuary](http://www.istuary.com) Innovation Labs Inc.
 
 ## Description
 This python 2 framework is meant to monitor a x86 (32bits only) VxWorks target while fuzzing it.
