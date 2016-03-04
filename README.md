@@ -5,6 +5,7 @@ Author: Yannick Formaggio
 This python 2 framework is meant to monitor a x86 (32bits only) VxWorks target while fuzzing it.
 It uses the WDB RPC protocol in order to know whether the target has crashed, then try to get more
 information on the crash context:
+
 * registers state
 * disassembly of the memory dump around the PC register when crash occurs if possible.
 
